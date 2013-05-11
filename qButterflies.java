@@ -40,14 +40,14 @@ import org.sirenia.scripts.qbutterflies.nodes.ResetNode;
 import org.sirenia.scripts.qbutterflies.nodes.SnowUnstuckNode;
 import org.sirenia.scripts.qbutterflies.nodes.SummoningNode;
 
-@Manifest(authors = { "Sirenia" }, name = "qButterflies", description = "Catching Butteflies, start at the location you want to use", vip = false, version = 0.31, website = "http://www.powerbot.org/community/topic/939450-qbutterflies-catches-all-butterflies-barehanded-autosetup-great-exp-free/?p=11494275")
+@Manifest(authors = { "Sirenia" }, name = "qButterflies", description = "Catching Butteflies, start at the location you want to use", vip = false, version = 1.0, website = "http://www.powerbot.org/community/topic/939450-qbutterflies-catches-all-butterflies-barehanded-autosetup-great-exp-free/?p=11494275")
 public class qButterflies extends ActiveScript implements PaintListener, MessageListener, MouseListener, ActionListener {
 
 	private final List<Node> jobsCollection = Collections.synchronizedList(new ArrayList<Node>());
 	private Tree jobContainer = null;
 	private Client client = Bot.client();
 
-	Timer t = new Timer(0);
+	private Timer t = new Timer(0);
 
 	public synchronized final void provide(final Node... jobs) {
 		for (final Node job : jobs) {
@@ -168,7 +168,6 @@ public class qButterflies extends ActiveScript implements PaintListener, Message
 			if (Players.getLocal().getInteracting() != null) {
 				NPC npc = (NPC) Players.getLocal().getInteracting();
 				npc.getLocation().draw(g);
-
 			}
 			g.setColor(Color.black);
 			g.drawLine(0, Mouse.getY(), Game.getDimensions().width, Mouse.getY());
