@@ -40,7 +40,7 @@ import org.sirenia.scripts.qbutterflies.nodes.ResetNode;
 import org.sirenia.scripts.qbutterflies.nodes.SnowUnstuckNode;
 import org.sirenia.scripts.qbutterflies.nodes.SummoningNode;
 
-@Manifest(authors = { "Sirenia" }, name = "qButterfliesDEV", description = "Catching Butteflies, start at the location you want to use", vip = false, version = 0.31, website = "http://www.powerbot.org/community/topic/939450-qbutterflies-catches-all-butterflies-barehanded-autosetup-great-exp-free/?p=11494275")
+@Manifest(authors = { "Sirenia" }, name = "qButterflies", description = "Catching Butteflies, start at the location you want to use", vip = false, version = 0.31, website = "http://www.powerbot.org/community/topic/939450-qbutterflies-catches-all-butterflies-barehanded-autosetup-great-exp-free/?p=11494275")
 public class qButterflies extends ActiveScript implements PaintListener, MessageListener, MouseListener, ActionListener {
 
 	private final List<Node> jobsCollection = Collections.synchronizedList(new ArrayList<Node>());
