@@ -12,13 +12,13 @@ public class HuntNode extends Node {
 
 	@Override
 	public boolean activate() {
-		Vars.status = "HuntingNode";
 		NPC butterfly = NPCs.getNearest(Vars.butterfly);
 		return !Vars.needToSummon && Vars.hunting_area.contains(Players.getLocal().getLocation()) && Players.getLocal().getInteracting() == null && Players.getLocal().isIdle() && butterfly != null;
 	}
 
 	@Override
 	public void execute() {
+		Vars.status = "HuntingNode";
 		NPC butterfly = NPCs.getNearest(Vars.butterfly);
 		if (!butterfly.isOnScreen()) {
 			Walking.walk(butterfly);
