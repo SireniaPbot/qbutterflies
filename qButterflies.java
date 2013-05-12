@@ -20,7 +20,9 @@ import org.powerbot.game.api.Manifest;
 import org.powerbot.game.api.methods.Game;
 import org.powerbot.game.api.methods.input.Mouse;
 import org.powerbot.game.api.methods.input.Mouse.Speed;
+import org.powerbot.game.api.methods.interactive.NPCs;
 import org.powerbot.game.api.methods.interactive.Players;
+import org.powerbot.game.api.methods.node.SceneEntities;
 import org.powerbot.game.api.methods.tab.Skills;
 import org.powerbot.game.api.methods.widget.Camera;
 import org.powerbot.game.api.methods.widget.WidgetCache;
@@ -38,7 +40,7 @@ import org.sirenia.scripts.qbutterflies.nodes.ResetNode;
 import org.sirenia.scripts.qbutterflies.nodes.SnowUnstuckNode;
 import org.sirenia.scripts.qbutterflies.nodes.SummoningNode;
 
-@Manifest(authors = { "Sirenia" }, name = "qButterflies", description = "Catching Butteflies, start at the location you want to use", vip = false, version = 1.0, website = "http://www.powerbot.org/community/topic/939450-qbutterflies-catches-all-butterflies-barehanded-autosetup-great-exp-free/?p=11494275")
+@Manifest(authors = { "Sirenia" }, name = "qButterfliesDEV", description = "Catching Butteflies, start at the location you want to use", vip = false, version = 0.31, website = "http://www.powerbot.org/community/topic/939450-qbutterflies-catches-all-butterflies-barehanded-autosetup-great-exp-free/?p=11494275")
 public class qButterflies extends ActiveScript implements PaintListener, MessageListener, MouseListener {
 
 	private final List<Node> jobsCollection = Collections.synchronizedList(new ArrayList<Node>());
@@ -73,6 +75,10 @@ public class qButterflies extends ActiveScript implements PaintListener, Message
 
 	@Override
 	public int loop() {
+		Vars.butterflai = NPCs.getNearest(Vars.butterfly);
+		Vars.steppes = SceneEntities.getNearest(Const.STEPPES);
+		Vars.canoe = SceneEntities.getNearest(Const.CANOE);
+
 		if (jobContainer != null) {
 			final Node job = jobContainer.state();
 			if (job != null) {
