@@ -2,8 +2,6 @@ package org.sirenia.scripts.qbutterflies;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -41,7 +39,7 @@ import org.sirenia.scripts.qbutterflies.nodes.SnowUnstuckNode;
 import org.sirenia.scripts.qbutterflies.nodes.SummoningNode;
 
 @Manifest(authors = { "Sirenia" }, name = "qButterflies", description = "Catching Butteflies, start at the location you want to use", vip = false, version = 1.0, website = "http://www.powerbot.org/community/topic/939450-qbutterflies-catches-all-butterflies-barehanded-autosetup-great-exp-free/?p=11494275")
-public class qButterflies extends ActiveScript implements PaintListener, MessageListener, MouseListener, ActionListener {
+public class qButterflies extends ActiveScript implements PaintListener, MessageListener, MouseListener {
 
 	private final List<Node> jobsCollection = Collections.synchronizedList(new ArrayList<Node>());
 	private Tree jobContainer = null;
@@ -208,10 +206,5 @@ public class qButterflies extends ActiveScript implements PaintListener, Message
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-
 	}
 }
