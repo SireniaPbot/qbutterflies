@@ -6,7 +6,8 @@ import java.awt.Image;
 import org.powerbot.game.api.methods.tab.Skills;
 import org.powerbot.game.api.wrappers.Area;
 import org.powerbot.game.api.wrappers.Tile;
-
+import org.powerbot.game.api.wrappers.interactive.NPC;
+import org.powerbot.game.api.wrappers.node.SceneObject;
 import org.sirenia.scripts.qbutterflies.misc.Methods.MouseTrail;
 
 public class Vars {
@@ -37,4 +38,8 @@ public class Vars {
 	public static int caught;
 	public static boolean show_paint = true;
 	public static String status = "Starting up";
+
+	public static NPC butterflai;
+	public static SceneObject steppes;
+	public static SceneObject canoe;
 }
